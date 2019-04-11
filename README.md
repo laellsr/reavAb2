@@ -1,1 +1,2 @@
-# reavAb2
+# iSoccer
+### Padrões Comportamentais Strategy e Iterator 
