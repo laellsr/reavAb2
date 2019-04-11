@@ -67,6 +67,11 @@ public class Cliente {
 					break;
 					
 				case 2:
+					Partner newPartner = new Partner();
+					persons.add(newPartner);
+					break;
+					
+				case 3:
 					
 					
 				case 0:

@@ -36,9 +36,23 @@ public class Partner extends Person
 		input.nextLine();
 	}
 	
-	public void setMyPlan()
-	{
-		this.myPlan = myPlan;
+	public void setMyPlan(){
+		Menu.partnerPlan();
+		switch (input.nextInt()) {
+		case 1:
+			this.myPlan = SupportPlans.JUNIOR;
+			break;
+		case 2:
+			this.myPlan = SupportPlans.SENIOR;
+			break;
+		case 3:
+			this.myPlan = SupportPlans.ELITE;
+			break;
+		default:
+			break;
+		}
+		
+		input.nextLine();
 	}
 	
 	public SupportPlans getMyPlan() {
