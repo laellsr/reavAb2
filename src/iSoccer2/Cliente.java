@@ -10,7 +10,7 @@ public class Cliente {
 		ArrayList<Person> persons = new ArrayList<Person>();
 		ArrayList<Resource> resources = new ArrayList<Resource>();
 		Scanner input = new Scanner(System.in);
-	/*	String password = "null";
+		String password = "null";
 		Menu.passwordLogin();
 	
 		while(password.intern()!="projetonota10") {
@@ -18,7 +18,7 @@ public class Cliente {
 			password = input.nextLine();
 			if(password.intern()!="projetonota10")
 				Menu.wrongLogin();
-		}*/
+		}
 		
 		boolean active = true;
 		while(active) {
