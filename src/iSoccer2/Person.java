@@ -18,6 +18,7 @@ public abstract class Person
 	public void setName() {
 		Menu.personName();
 		this.name = input.nextLine();
+		this.name = this.name.toUpperCase();
 	}
 
 	public String getEmail() {
@@ -47,5 +48,8 @@ public abstract class Person
 		this.phone = input.nextLine();
 	}
 	
-
+	public void isPay()
+	{
+		
+	}
 }

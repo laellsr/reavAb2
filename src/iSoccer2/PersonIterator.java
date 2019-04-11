@@ -12,15 +12,23 @@ public class PersonIterator implements Iterator{
 		this.persons = persons;
 	}
 	
+	public void resetIndex() {
+		this.index = 0;
+	}
+	
 	@Override
 	public boolean hasNext() {
-		return false;
+		if (index >= persons.size() || persons.get(index)==null)
+			return false;
+		else
+			return true;
 	}
 
 	@Override
 	public Object next() {
-		return null;
-	}
-	
+		Person person = persons.get(index);
+		index++;
+		return person;
+	}	
 
 }

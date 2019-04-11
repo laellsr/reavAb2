@@ -23,8 +23,12 @@ public class Partner extends Person
 		this.address = input.nextLine();
 	}
 
-	public boolean isPay() {
-		return pay;
+	@Override
+	public void isPay() {
+		if (this.pay)
+			Menu.partnerAd();
+		else
+			Menu.partnerInad();
 	}
 
 	public void setPay() {

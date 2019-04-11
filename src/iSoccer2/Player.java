@@ -16,8 +16,11 @@ public class Player extends Employee
 		setApto();
 	}
 
-	public boolean isApto() {
-		return apto;
+	public void isApto() {
+		if(apto)
+			Menu.playerIsApto();
+		else
+			Menu.playerIsNotApto();
 	}
 
 	public void setApto() {
