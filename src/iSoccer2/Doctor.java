@@ -1,9 +1,22 @@
 package iSoccer2;
 
 public class Doctor extends Employee {
+	
+	String CRM;
+	
+	public Doctor() {
+		super();
+		setCRM();
+	}
 
-	public Doctor(String name, String email, String CPF, String phone, double salary) {
-		super(name, email, CPF, phone, salary);
-}
+	public String getCRM() {
+		return CRM;
+	}
+
+	public void setCRM() {
+		Menu.doctorCRM();
+		this.CRM = input.nextLine();
+	}
+	
 
 }

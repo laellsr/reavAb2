@@ -1,47 +1,51 @@
 package iSoccer2;
 
+import java.util.Scanner;
+
 public abstract class Person
 {
+	Scanner input = new Scanner(System.in);
 	protected String name, email, CPF, phone;
 	
-	public Person(String name, String email, String CPF, String phone)
+	public Person()
 	{
-		this.name = name;
-		this.email = email ;
-		this.CPF = CPF;
-		this.phone = phone;
+		setName(); setEmail(); setCPF(); setPhone();
 	}
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName() {
+		Menu.personName();
+		this.name = input.nextLine();
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmail() {
+		Menu.personEmail();
+		this.email = input.nextLine();
 	}
 
 	public String getCPF() {
 		return CPF;
 	}
 
-	public void setCPF(String cPF) {
-		CPF = cPF;
+	public void setCPF() {
+		Menu.personCPF();
+		this.CPF = input.nextLine();
 	}
 
 	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setPhone() {
+		Menu.personPhone();
+		this.phone = input.nextLine();
 	}
 	
-	
+
 }

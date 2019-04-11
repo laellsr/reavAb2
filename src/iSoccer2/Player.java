@@ -4,15 +4,38 @@ public class Player extends Employee
 {
 	public enum playerFunction
 	{
-		VOLANTE, ZAGUEIRO, MEIA, GOLEIRO, ATACANTE, LATERALESQUERDO, LATERALDIREITO
+		VOLANTE, ZAGUEIRO, MEIA, GOLEIRO, ATACANTE, LATERALESQUERDO, LATERALDIREITO;
 	}
+
 	boolean apto;
 	public playerFunction type;
 	
-	public Player(String name, String email, String CPF, String phone, double salary, int function, boolean apto) {
-		super(name, email, CPF, phone, salary);
-	
-		switch (function) {
+	public Player() {
+		super();
+		setType();
+		setApto();
+	}
+
+	public boolean isApto() {
+		return apto;
+	}
+
+	public void setApto() {
+		Menu.playerApto();
+		if (input.nextInt()==1) 
+			this.apto = true;
+		else
+			this.apto = false;
+		input.nextLine();
+	}
+
+	public playerFunction getType() {
+		return type;
+	}
+
+	public void setType() {
+		Menu.playerType();
+		switch (input.nextInt()) {
 		case 1:
 			this.type = playerFunction.VOLANTE;
 			break;
@@ -35,16 +58,7 @@ public class Player extends Employee
 			this.type = playerFunction.LATERALDIREITO;
 			break;
 		}
-		
-		this.apto = apto;
-	}
-
-	public boolean isApto() {
-		return apto;
-	}
-
-	public void setApto(boolean apto) {
-		this.apto = apto;
+		input.nextLine();
 	}
 	
 	

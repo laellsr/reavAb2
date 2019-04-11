@@ -2,33 +2,41 @@ package iSoccer2;
 
 public class Partner extends Person
 {
-	String adress;
+	String address;
 	boolean pay;
 	SupportPlans myPlan;
 	
-	public Partner(String name, String email, String CPF, String phone, String adress, boolean pay) {
-		super(name, email, CPF, phone);
-		this.adress = adress;
-		this.pay = pay;
+	public Partner() {
+		super();
+		setAddress();
+		setPay();
+		setMyPlan();
+
 	}
 
 	public String getAdress() {
-		return adress;
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress() {
+		Menu.partnerAddress();
+		this.address = input.nextLine();
 	}
 
 	public boolean isPay() {
 		return pay;
 	}
 
-	public void setPay(boolean pay) {
-		this.pay = pay;
+	public void setPay() {
+		Menu.partnerPay();
+		if (input.nextInt()==1) 
+			this.pay = true;
+		else
+			this.pay = false;
+		input.nextLine();
 	}
 	
-	public void setMyPlan(SupportPlans myPlan)
+	public void setMyPlan()
 	{
 		this.myPlan = myPlan;
 	}
